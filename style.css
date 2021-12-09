@@ -264,6 +264,26 @@ footer .container {
   padding: 40px 20px;
 }
 
+@media (min-width: 768px) {
+	footer .container {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.footA {
+		flex: 0 0 40%;
+	}
+	.footB {
+		flex: 0 0 60%;
+	}
+	.footC {
+		flex: 0 0 100%;
+	}
+}
+
 .footA {
   margin-bottom: 30px;
 }
@@ -324,3 +344,10 @@ footer .container {
 		margin-left: 40px;
 	}
 }
+
+.footC {
+	font-size: 12px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
