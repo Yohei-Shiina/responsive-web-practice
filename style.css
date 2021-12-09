@@ -389,3 +389,61 @@ header {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 24px;
 }
+
+.headB a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+.headB a {
+	display: block;
+	padding: 15px;
+	color: inherit;
+	font-size: 12px;
+}
+
+@media (min-width: 768px) {
+	header .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.headB ul {
+		display: flex;
+	}
+}
+
+@media (max-width: 767px) {
+	.small-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.headC {
+		margin-right: 10px;
+		border:none;
+		background: none;
+		font-size: 28px;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+	.headC :hover {
+		opacity: 0.3;
+	}
+	.headB {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.headC {
+		display: none;
+	}
+	
+	.headB {
+		display: block !important;
+	}
+}
