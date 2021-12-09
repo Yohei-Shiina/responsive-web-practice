@@ -308,12 +308,6 @@ footer .container {
 	margin-bottom: 20px;
 }
 
-.footB ul {
-	/* margin: 0;
-	padding: 0;
-	list-style: none; */
-}
-
 .footB a {
 	display: block;
 	padding: 5px;
@@ -351,3 +345,25 @@ footer .container {
 	font-family: 'Montserrat', sans-serif;
 }
 
+.footD {
+	margin-top: 20px;
+}
+.footD ul {
+	display: flex;
+}
+.footD a {
+	display: block;
+	margin-right: 8px;
+	padding: 0px;
+  color: inherit;
+  font-size: 16px;
+	border: solid 1px currentColor;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.footD a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
