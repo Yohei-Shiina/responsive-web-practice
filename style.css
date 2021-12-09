@@ -4,7 +4,7 @@
 :root {
 	--main-color: #5d9ab2;
 	--accent-color: #bf6a7a;
-	--dark-color: #2b5566;
+	--dark-main-color: #2b5566;
 	--text-bright-color: #fff;
 	--icon-color: #fff;
 	--icon-bk-color: #ddd;
@@ -250,3 +250,61 @@ body {
 		padding: 50px;
 	}
 }
+
+/* footer A サイト情報 */
+
+footer {
+  color: #fff;
+  color: var(--text-bright-color);
+  background-color: #2b5566;
+  background-color: var(--dark-main-color);
+}
+
+footer .container {
+  padding: 40px 20px;
+}
+
+.footA {
+  margin-bottom: 30px;
+}
+
+.footA h2 {
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+}
+
+.footA p {
+  font-size: 14px;
+}
+
+.footA a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footB ul {
+	/* margin: 0;
+	padding: 0;
+	list-style: none; */
+}
+
+.footB a {
+	display: block;
+	padding: 5px;
+  color: inherit;
+  font-size: 12px;
+}
+
+.footB a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footB h3{
+  margin-bottom: 10px;
+  border-bottom: solid 1px currentColor;
+  font-size: 14px;
+}
+
+
