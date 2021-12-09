@@ -433,10 +433,17 @@ header {
 	.headC :hover {
 		opacity: 0.3;
 	}
+	.headB {
+		display: none;
+	}
 }
 
 @media (min-width: 768px) {
 	.headC {
 		display: none;
+	}
+	
+	.headB {
+		display: block !important;
 	}
 }
