@@ -572,7 +572,46 @@ header {
 		text-align: left;
 		word-break: keep-all;
 	}
-	.history table {
-		
+}
+
+/* お問い合わせ */
+.contact {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	border: solid 1px #ddd;
+	border: solid 1px var(--gray-color);
+	text-align: center;
+}
+.contact h2{
+	margin-bottom: 15px;
+	font-size: 1.2rem;
+}
+.contact a {
+	font-size: 1.4rem;
+	color: inherit;
+}
+.contact span {
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 2.2rem;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #5d9ab2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+}
+@media (min-width: 768px) {
+	.contact-wrap {
+		display: flex;
+	}
+	.contact {
+		flex: 1;
+	}
+	.contact:first-child {
+		margin-right: 20px;
 	}
 }
