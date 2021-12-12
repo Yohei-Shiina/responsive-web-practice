@@ -729,3 +729,59 @@ header {
 		display: none;
 	}
 }
+
+.listC .container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: none;
+	margin: 2px auto;
+}
+.listC article {
+	flex: 1 1 250px;
+	display: flex;
+}
+.listC h1 {
+	text-align: center;
+}
+.listC h2 {
+	font-size: 18px;
+}
+.listC p {
+	font-size: 14px;
+	opacity: 0.8;
+}
+.listC .photo {
+	min-height: 250px;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.6;
+}
+.listC .text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 10px;
+	color: #fff;
+	color: var(--text-bright-color);
+}
+.listC a {
+	flex: 1;
+	margin: 2px;
+	display: block;
+	border: solid 1px #ddd;
+	border: solid 1px var(--gray-color);
+	color: inherit;
+	position: relative;
+	background-color: currentColor;
+}
+.listC a:hover {
+	opacity: 0.8;
+}
+@media (min-width: 1000px) {
+	.listC article {
+		flex: 1 1 25%;
+	}
+	.listC article:nth-child(4n+1) {
+		flex: 1 1 50%;
+	}
+}
