@@ -8,13 +8,37 @@
 	--text-bright-color: #fff;
 	--icon-color: #fff;
 	--icon-bk-color: #ddd;
+  --gray-color: #ddd;
 	--large-width: 1000px;
+  --middle-width: 800px;
+}
+
+/* general settings: font-size */
+@media (max-width: 599px) {
+	:root {
+		font-size: 14px;
+	}
+}
+@media (min-width: 600px) and (max-width: 799px) {
+	:root {
+		font-size: 16px;
+	}
+}
+@media (max-width: 800px) {
+	:root {
+		font-size: 18px;
+	}
 }
 
 body {
+	font-size: 16px;
 	font-family: 'メイリオ' ,
 	'Hiragino Kaku Gothic Pro' ,
 	sans-serif;
+}
+
+h2 {
+	font-weight: 600;
 }
 
 .conA {
@@ -29,6 +53,11 @@ body {
 	color: #fff;
 	color: var(--text-bright-color);
 	text-align: center;
+}
+.conA.compact {
+	height: 450px;
+	min-height: 0;
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/balloon.jpg');
 }
 
 .conA h1 {
@@ -368,6 +397,7 @@ footer .container {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* cancel pos absolute except for home page */
 header {
 	position: absolute;
 	top:0;
@@ -375,6 +405,13 @@ header {
 	z-index: 100;
 	width: 100%;
 	background-color: rgba(255, 255, 255, 0.9);
+}
+
+/*  */
+.no-hero header {
+  position: static;
+  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px var(--gray-color);
 }
 
 .headA {
@@ -445,5 +482,407 @@ header {
 	
 	.headB {
 		display: block !important;
+	}
+}
+
+/* contents page: article */
+.post .container {
+  padding: 30px 10px;
+  max-width: 800px;
+  max-width: var(--middle-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post h1 {
+	padding-left: 0.5rem;
+	border-left: solid 0.75rem #bf6a7a;
+	border-left: solid 0.75rem var(--accent-color);
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+.post p {
+	font-size: 1rem;
+	line-height: 2;
+}
+.post img {
+	max-width: 100%;
+}
+
+.bread ol {
+	display: flex;
+}
+.bread a {
+	display: block;
+	padding: 5px;
+  color: inherit;
+  font-size: 0.875rem;
+}
+
+.bread a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.bread a::after {
+	margin-left: 10px;
+	content: '\f054';
+	font-family: 'FontAwesome';
+	opacity: 0.3;
+}
+
+.history {
+	background-color: #5d9ab2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+}
+.history .text {
+	padding: 20px;
+}
+.history h2 {
+	margin-bottom: 10px;
+	font-size: 1.5rem;
+}
+.history .photo {
+	min-height: 300px;
+	background-image: url('img/plant.jpg');
+	background-position: center;
+	background-size: cover;
+}
+@media (min-width: 768px) {
+	.history .container {
+		display: flex;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.history .photo {
+		flex: 3;
+	}
+	.history .text {
+		flex: 2;
+		padding: 50px;
+	}
+	.history table {
+		border-collapse: collapse;
+		border-top: solid 1px #ddd;
+		border-top: solid 1px var(--gray-color);
+		font-size: 0.875rem;
+	}
+	.history th,
+	.history td {
+		padding-top: 1.8rem;
+		padding-bottom: 1.8rem;
+		border-bottom: solid 1px #ddd;
+		border-bottom: solid 1px var(--gray-color);
+	}
+	.history th {
+		padding-right: 1rem;
+		text-align: left;
+		word-break: keep-all;
+	}
+}
+
+/* お問い合わせ */
+.contact {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	border: solid 1px #ddd;
+	border: solid 1px var(--gray-color);
+	text-align: center;
+}
+.contact h2{
+	margin-bottom: 15px;
+	font-size: 1.2rem;
+}
+.contact a {
+	font-size: 1.4rem;
+	color: inherit;
+}
+.contact span {
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 2.2rem;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #5d9ab2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+}
+@media (min-width: 768px) {
+	.contact-wrap {
+		display: flex;
+	}
+	.contact {
+		flex: 1;
+	}
+	.contact:first-child {
+		margin-right: 20px;
+	}
+}
+
+.location iframe {
+	width: 100%;
+	height: 400px;
+	vertical-align: bottom;
+}
+.location h2 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #5d9ab2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-size: 1.5rem;
+	text-align: center;
+}
+.listA .container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	max-width: var(--large-width);
+	margin: 30px auto;
+}
+.listA article {
+	flex: 1 1 300px;
+	display: flex;
+}
+.listA h1 {
+	text-align: center;
+}
+.listA h2 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.listA p {
+	font-size: 14px;
+	opacity: 0.8;
+}
+.listA .photo {
+	min-height: 150px;
+	background-position: center;
+	background-size: cover;
+}
+.listA .text {
+	margin: 10px;
+}
+.listA a {
+	flex: 1;
+	margin: 10px;
+	display: block;
+	border: solid 1px #ddd;
+	border: solid 1px var(--gray-color);
+	color: inherit;
+}
+.listA a:hover {
+	opacity: 0.8;
+}
+
+.listB .container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	max-width: var(--large-width);
+	margin: 30px auto;
+}
+.listB article {
+	flex: 1 1 384px;
+	display: flex;
+}
+.listB h1 {
+	text-align: center;
+}
+.listB h2 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.listB p {
+	font-size: 14px;
+	opacity: 0.8;
+}
+.listB .photo {
+	flex: 2;
+	min-height: 0;
+	background-position: center;
+	background-size: cover;
+}
+.listB .text {
+	margin: 10px;
+	flex: 3;
+}
+.listB a {
+	display: flex;
+	flex: 1;
+	margin: 10px;
+	border: solid 1px #ddd;
+	border: solid 1px var(--gray-color);
+	color: inherit;
+}
+.listB a:hover {
+	opacity: 0.8;
+}
+@media (max-width: 384px) {
+	.listB .photo {
+		flex: 1;
+	}
+	.listB p {
+		display: none;
+	}
+}
+
+.listC .container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: none;
+	margin: 2px auto;
+}
+.listC article {
+	flex: 1 1 250px;
+	display: flex;
+}
+.listC h1 {
+	text-align: center;
+}
+.listC h2 {
+	font-size: 18px;
+}
+.listC p {
+	font-size: 14px;
+	opacity: 0.8;
+}
+.listC .photo {
+	min-height: 250px;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.6;
+}
+.listC .text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 10px;
+	color: #fff;
+	color: var(--text-bright-color);
+}
+.listC a {
+	flex: 1;
+	margin: 2px;
+	display: block;
+	border: solid 1px #ddd;
+	border: solid 1px var(--gray-color);
+	color: inherit;
+	position: relative;
+	background-color: currentColor;
+}
+.listC a:hover {
+	opacity: 0.8;
+}
+@media (min-width: 1000px) {
+	.listC article {
+		flex: 1 1 25%;
+	}
+	.listC article:nth-child(4n+1) {
+		flex: 1 1 50%;
+	}
+}
+
+/* head color */
+.head-color {
+	background-color: #5d9ab2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+}
+.head-color .headA {
+	background-color: transparent;
+	color: inherit;
+}
+
+.head-color .headC{
+	color: inherit;
+}
+.head-hero {
+	background-color: transparent;
+	color: #fff;
+	color: var(--text-bright-color);
+}
+.head-hero .headA {
+	background-color: transparent;
+	color: inherit;
+}
+.head-hero .headC {
+	color: inherit;
+	opacity: 1;
+}
+@media (max-width: 767px) {
+	.head-hero .headB {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+}
+
+.head-fixed,
+.no-hero .head-fixed {
+	position: fixed;
+}
+.no-hero .head-fixed + * {
+	margin-top: 70px;
+}
+
+.related {
+	background-color: #5d9ab2;
+	background-color: var(--main-color);
+	padding: 30px 0;
+}
+.related ul {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.related li {
+	flex: 1 1 100%;
+	display: flex;
+}
+.related a {
+	flex: 1;
+	margin: 10px;
+	display: block;
+	border: solid 1px #ddd;
+	border: solid 1px var(--gray-color);
+	background-color: rgba(255, 255, 255, 0.5);
+	color: inherit;
+}
+.related a:hover {
+	opacity: 0.8;
+}
+.related .photo {
+	min-height: 100px;
+	background-position: center;
+	background-size: cover;
+}
+.related .text {
+	margin: 10px;
+}
+.related h2 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.related .p {
+	font-size: 14px;
+	opacity: 0.8;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+	.related li {
+		flex: 1 1 50%;
+	}
+}
+@media (min-width: 900px) {
+	.related li {
+		flex: 1 1 25%;
 	}
 }
