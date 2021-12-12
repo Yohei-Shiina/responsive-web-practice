@@ -404,7 +404,7 @@ header {
 }
 
 /*  */
-.nohero header {
+.no-hero header {
   position: static;
   border-bottom: solid 1px #ddd;
   border-bottom: solid 1px var(--gray-color);
@@ -800,4 +800,30 @@ header {
 
 .head-color .headC{
 	color: inherit;
+}
+.head-hero {
+	background-color: transparent;
+	color: #fff;
+	color: var(--text-bright-color);
+}
+.head-hero .headA {
+	background-color: transparent;
+	color: inherit;
+}
+.head-hero .headC {
+	color: inherit;
+	opacity: 1;
+}
+@media (max-width: 767px) {
+	.head-hero .headB {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+}
+
+.head-fixed,
+.no-hero .head-fixed {
+	position: fixed;
+}
+.no-hero .head-fixed + * {
+	margin-top: 70px;
 }
